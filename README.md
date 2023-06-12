@@ -62,20 +62,15 @@ npm run seed:prod
 `POST user login -`
 POST   | http://localhost:3001/dev/v1/login
 
-`POST record new user operation -`       
-POST   | http://localhost:3001/dev/v1/record 
+`record new user operation -`  POST   | http://localhost:3001/dev/v1/record 
 
-`DELETE soft delete user operations -`      
-DELETE | http://localhost:3001/dev/v1/record
+`soft delete user operation -` DELETE | http://localhost:3001/dev/v1/record
 
-`GET get all user operations -`      
-GET    | http://localhost:3001/dev/v1/record
+`get all user operations -`    GET    | http://localhost:3001/dev/v1/record
 
-`GET get all operations -` 
-GET    | http://localhost:3001/dev/v1/operation
+`get all operations -`         GET    | http://localhost:3001/dev/v1/operation
 
-`POST user login -`    
-POST   | http://localhost:3001/dev/seedData 
+`seed data -`                  POST   | http://localhost:3001/dev/seedData 
 
 
 ## Testing
