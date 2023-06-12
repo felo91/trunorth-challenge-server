@@ -15,7 +15,7 @@
     "db:start": "sls dynamodb start",
     "lint": "eslint --fix",
     "prettier": "prettier -w src",
-    "seed:prod": "curl -X POST https://yourapiroute.execute-api.us-east-2.amazonaws.com/prod/seedData"
+    "seed:prod": "curl -X POST https://yourLambda.execute-api.us-east-2.amazonaws.com/prod/seedData"
   },
   "dependencies": {
     "aws-sdk": "^2.1395.0",
