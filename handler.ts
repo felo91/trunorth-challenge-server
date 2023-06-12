@@ -7,7 +7,7 @@ import "source-map-support/register";
 export { loginV1 } from "./src/actions/v1/auth/login.action";
 
 // Record functions
-//export { createRecordV1 } from "./src/actions/v1/record/create-record.action";
+export { createRecordV1 } from "./src/actions/v1/record/create-record.action";
 export { listRecordsByUserV1 } from "./src/actions/v1/record/list-records-by-user.action";
 export { deleteRecordV1 } from "./src/actions/v1/record/delete-record.action";
 

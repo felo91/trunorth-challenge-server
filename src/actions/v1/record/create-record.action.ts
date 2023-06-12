@@ -33,7 +33,7 @@ const createRecordHandler = async (body: IRecordProps, context: any): Promise<Re
 
     const recordService = new RecordService();
     const lastRecord = await recordService.getLastByUserId(context.user);
-    body.user_balance = lastRecord ? lastRecord.user_balance! - operation.cost : 10 - operation.cost;
+    body.user_balance = lastRecord ? lastRecord.user_balance! - operation.cost : 15 - operation.cost;
 
     if (body.user_balance < 0) {
       throw new ResponseModel({}, StatusCode.BAD_REQUEST, ResponseMessage.USER_CREDIT_NOT_ENOUGH);
