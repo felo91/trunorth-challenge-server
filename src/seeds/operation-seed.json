@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "type": "ADDITION",
+    "cost": 1,
+    "inputsNeeded": 2
+  },
+  {
+    "id": "2",
+    "type": "SUBTRACTION",
+    "cost": 2,
+    "inputsNeeded": 2
+  },
+  {
+    "id": "3",
+    "type": "MULTIPLICATION",
+    "cost": 3,
+    "inputsNeeded": 2
+  },
+  {
+    "id": "4",
+    "type": "DIVISION",
+    "cost": 4,
+    "inputsNeeded": 2
+  },
+  {
+    "id": "5",
+    "type": "SQUARE_ROOT",
+    "cost": 5,
+    "inputsNeeded": 1
+  },
+  {
+    "id": "6",
+    "type": "RANDOM_STRING",
+    "cost": 6,
+    "inputsNeeded": 0
+  }
+]

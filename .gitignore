@@ -1,0 +1,13 @@
+node_modules
+
+.serverless
+
+.esbuild
+
+.env
+
+.vscode
+.idea
+.dynamodb
+
+src/seeds/user-seed.json

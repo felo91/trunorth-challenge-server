@@ -1,0 +1,2 @@
+RANDOM_ORG_API_KEY=someApiKeyFromRandom.org
+JWT_SECRET=yourSecretJWTSeed
