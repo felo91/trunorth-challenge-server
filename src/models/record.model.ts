@@ -4,7 +4,7 @@ export interface IRecordProps {
   id?: string;
   operation_id: string;
   user_id: string;
-  amount: [number, number];
+  amount: number[];
   user_balance: number;
   operation_response: string;
   deleted?: boolean;
@@ -13,7 +13,7 @@ export interface IRecordProps {
 export interface IRecordDTO {
   id?: string;
   operation_id: string;
-  amount: [number, number];
+  amount: number[];
   user_balance?: number;
   user_id?: string;
   operation_response?: string;
@@ -28,7 +28,7 @@ export default class RecordModel {
   private _id: string;
   private _operation_id: string;
   private _user_id: string;
-  private _amount: [number, number];
+  private _amount: number[];
   private _user_balance: number;
   private _operation_response: string;
   private _deleted: boolean;
@@ -78,10 +78,10 @@ export default class RecordModel {
     return this._user_id;
   }
 
-  set amount(value: [number, number]) {
+  set amount(value: number[]) {
     this._amount = value;
   }
-  get amount(): [number, number] {
+  get amount(): number[] {
     return this._amount;
   }
 

@@ -20,6 +20,7 @@
   "dependencies": {
     "aws-sdk": "^2.1395.0",
     "bcryptjs": "^2.4.3",
+    "dynamodb-localhost": "github:99x/dynamodb-localhost#db30898f8c40932c7177be7b2f1a81360d12876d",
     "uuid": "^9.0.0"
   },
   "devDependencies": {

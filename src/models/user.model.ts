@@ -1,5 +1,4 @@
 import { v4 as UUID } from 'uuid';
-//import crypto from "crypto";
 import * as bcrypt from 'bcryptjs';
 
 export interface IUserInterface {

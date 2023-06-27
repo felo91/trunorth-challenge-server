@@ -13,7 +13,7 @@ import OperationModel, { IOperationInterface } from '../../../models/operation.m
 import { makeOperation } from '../../../services/operation.service';
 import { RecordService } from '../../../services/record.service';
 
-const createRecordHandler = async (body: IRecordProps, context: any): Promise<ResponseModel> => {
+export const createRecordHandler = async (body: IRecordProps, context: any): Promise<ResponseModel> => {
   try {
     const databaseService = new DatabaseService();
     body.user_id = context.user;

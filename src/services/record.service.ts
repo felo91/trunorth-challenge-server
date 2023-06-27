@@ -41,7 +41,9 @@ export class RecordService {
 
     let resultItems: ItemList = [];
     let lastEvaluatedKey: Key | undefined = undefined;
+    let paginationKey: Key | undefined = undefined;
     let totalItems: number = 0;
+    let fetchedItems: number = 0;
 
     do {
       const records = await this.databaseService.query(params);
@@ -49,16 +51,22 @@ export class RecordService {
       lastEvaluatedKey = records.LastEvaluatedKey || undefined;
       resultItems.push(...(records.Items || []));
       totalItems += records.Count || 0;
+      fetchedItems += records.Count || 0;
 
-      params.ExclusiveStartKey = lastEvaluatedKey!;
-    } while (lastEvaluatedKey && resultItems.length < params.Limit!);
+      if (fetchedItems >= params.Limit! && !paginationKey) {
+        paginationKey = lastEvaluatedKey;
+      }
+
+      params.ExclusiveStartKey = lastEvaluatedKey;
+    } while (lastEvaluatedKey);
 
     resultItems = resultItems.slice(0, params.Limit);
 
     let records = resultItems.map((item) => new RecordModel(item as unknown as IRecordInterface).toEntityMappings());
 
-    return { records, lastEvaluatedKey, totalItems };
+    return { records, lastEvaluatedKey: paginationKey, totalItems };
   }
+
 
   async getLastByUserId(user_id: string): Promise<IRecordInterface | null> {
     const params: QueryItem = {
@@ -68,7 +76,7 @@ export class RecordService {
       ExpressionAttributeValues: {
         ':user_id': user_id,
       },
-      ScanIndexForward: false, // For descending order by date
+      ScanIndexForward: false,
       Limit: 1,
     };
 

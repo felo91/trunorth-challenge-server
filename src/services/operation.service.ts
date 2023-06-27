@@ -20,6 +20,8 @@ export const makeOperation = async ({ type, amounts }): Promise<number | Respons
         return Math.sqrt(amounts[0]);
       case 'RANDOM_STRING':
         return await getRandomNumber();
+      case 'RESET_BALANCE':
+        return 15;
       default:
         throw ResponseMessage.INVALID_OPERATION;
     }

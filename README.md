@@ -1,6 +1,6 @@
 # TrueNorth Challenge with TypeScript
 
-This project is an AWS serverless calculator server built with TypeScript and utilizing the Serverless Framework. Key services used include AWS Lambda and DynamoDB.
+This project is an AWS serverless calculator server built with Node.js 16.x, TypeScript and utilizing the Serverless Framework. Key services used include AWS Lambda and DynamoDB.
 
 ## Getting Started
 
@@ -19,7 +19,7 @@ npm install
 Before you can run the server locally, make sure to install DynamoDB Local using the following command:
 
 ```shell
-npm run dynamodb:install
+npm run db:install
 ```
 
 You can then start the server in offline mode with:
@@ -45,7 +45,7 @@ Create a `user-seed.json` file in the `src/seed` directory with the following st
 ```json
 {
   "username": "<user-email>",
-  "password": "<user-encrypted-password>"
+  "password": "<user-encrypted-password>",
   "status": "ACTIVE",
   "id": "b73caeba-058a-4713-9091-d84afd0975e2"
 }
@@ -92,7 +92,7 @@ npm run test
 
 ## Live demo
 
-https://ahvbqgblu9.execute-api.us-east-2.amazonaws.com/prod
+https://3nr88o2ij7.execute-api.us-east-2.amazonaws.com/prod
 
 ## License
 

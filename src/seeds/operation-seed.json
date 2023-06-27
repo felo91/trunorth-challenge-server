@@ -34,5 +34,11 @@
     "type": "RANDOM_STRING",
     "cost": 6,
     "inputsNeeded": 0
+  },
+  {
+    "id": "7",
+    "type": "RESET_BALANCE",
+    "cost": -15,
+    "inputsNeeded": 0
   }
 ]
